@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="forceReload($event)">
+    <ion-refresher-content refreshingText="Reload from API....">
+    </ion-refresher-content>
+  </ion-refresher>
+  <button ion-button full (click)="loadToeflLists()">Load Toefl Lists</button>
+  <button ion-button full color="danger" (click)="invalidateCache()">Invalidate Cache</button>
+
+  <ion-list>
+    <ion-item *ngFor="let toefl of this.toeflLists">
+
+        {{ toefl.toeflNo}} {{ toefl.toeflLevel }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "ionicCachingExample",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
